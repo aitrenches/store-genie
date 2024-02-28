@@ -258,7 +258,7 @@ const Pricing = () => {
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto"
+              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal sm:w-9/12  lg:w-4/12 mx-auto"
             >
               Trusted by Thousands of Happy Customer{" "}
             </motion.h3>
