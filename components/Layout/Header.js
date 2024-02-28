@@ -3,11 +3,21 @@ import Link from "next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
 import ButtonOutline from "../misc/ButtonOutline.";
-import LogoVPN from "../../public/assets/Logo.svg";
-
+import Image from "next/image";
+import SessionModal from "../misc/Modal";
 const Header = () => {
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollActive(window.scrollY > 20);
@@ -15,6 +25,7 @@ const Header = () => {
   }, []);
   return (
     <>
+    <SessionModal isModalOpen={isModalOpen}  handleOk={handleOk} handleCancel={handleCancel}  />
       <header
         className={
           "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
@@ -23,7 +34,9 @@ const Header = () => {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <LogoVPN className="h-8 w-auto" />
+          <div className="relative h-16 w-16">
+          <Image src={"/assets/logo.png"}  layout="fill" fill  />
+          </div>
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
             <LinkScroll
@@ -100,12 +113,12 @@ const Header = () => {
             </LinkScroll>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
-            <Link href="/">
+            {/* <Link href="/">
               <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">
-                  Sign In
+                 Schedule a session
               </a>
-            </Link>
-            <ButtonOutline>Sign Up</ButtonOutline>
+            </Link> */}
+            <ButtonOutline onClick={showModal}>Begin Your Platform Setup</ButtonOutline>
           </div>
         </nav>
       </header>

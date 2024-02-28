@@ -5,10 +5,10 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
 const features = [
-  "Powerfull online protection.",
-  "Internet without borders.",
-  "Supercharged VPN",
-  "No specific time limits."
+  "Efficient Inventory Management",
+  "Quick and Easy Setup",
+  "Customization at Your Fingertips",
+  // "No specific time limits."
 ]
 
 const Feature = () => {
@@ -23,7 +23,7 @@ const Feature = () => {
         <ScrollAnimationWrapper className="flex w-full justify-end">
           <motion.div className="h-full w-full p-4" variants={scrollAnimation}>
             <Image
-              src="/assets/Illustration2.png"
+              src="/assets/customize.svg"
               alt="VPN Illustrasi"
               layout="responsive"
               quality={100}
