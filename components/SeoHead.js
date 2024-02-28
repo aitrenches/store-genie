@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 
 // Default value for some meta data
 const defaultMeta = {
-  title: "Showluv Africa",
-  siteName: "Showluv Africa",
-  description: "Welcome to Showluv Africa – Your End-to-End Ecommerce Solution",
+  title: "Showluv Market",
+  siteName: "Showluv Market",
+  description: "Welcome to Showluv Market – Your End-to-End Ecommerce Solution",
   // change base url of your web (without '/' at the end)
   url: "https://next-landing-vpn.vercel.app",
   type: "website",

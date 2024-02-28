@@ -285,7 +285,7 @@ const Pricing = () => {
                   </h5>
                   <p>
                     {" "}
-                    Explore how Showluv Africa can transform your business.
+                    Explore how Showluv Market can transform your business.
                   </p>
                 </div>
                 <ButtonPrimary onClick={showModal}>

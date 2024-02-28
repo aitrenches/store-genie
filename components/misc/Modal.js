@@ -10,7 +10,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
   return (
     <Modal
     
-      title="Showluv Africa Platform Setup Form"
+      title="Showluv Market Platform Setup Form"
       open={isModalOpen}
       onOk={handleOk}
       onCancel={handleCancel}
