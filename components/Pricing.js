@@ -289,7 +289,7 @@ const Pricing = () => {
                   </p>
                 </div>
                 <ButtonPrimary onClick={showModal}>
-                  Begin Your Platform Setup
+                  Get started
                 </ButtonPrimary>
               </div>
               <div

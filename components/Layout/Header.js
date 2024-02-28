@@ -118,7 +118,7 @@ const Header = () => {
                  Schedule a session
               </a>
             </Link> */}
-            <ButtonOutline onClick={showModal}>Begin Your Platform Setup</ButtonOutline>
+            <ButtonOutline onClick={showModal}>Get Started</ButtonOutline>
           </div>
         </nav>
       </header>
