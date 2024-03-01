@@ -284,7 +284,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
             span: 16,
           }}
         >
-          <ButtonPrimary type="primary" htmlType="submit">
+          <ButtonPrimary addClass={"mt-4"} type="primary" htmlType="submit">
             Submit
           </ButtonPrimary>
         </Form.Item>
