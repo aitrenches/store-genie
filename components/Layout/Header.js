@@ -34,7 +34,7 @@ const Header = () => {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-          <div className="relative h-16 w-16">
+          <div className="relative h-8 w-28">
           <Image src={"/assets/logo.png"}  layout="fill" fill  />
           </div>
           </div>
@@ -73,7 +73,7 @@ const Header = () => {
                   : " text-black-500 hover:text-orange-500 ")
               }
             >
-              Feature
+              Services
             </LinkScroll>
             <LinkScroll
               activeClass="active"

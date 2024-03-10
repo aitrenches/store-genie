@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import SessionModal from "./misc/Modal";
+import ButtonOutline from "./misc/ButtonOutline.";
 
 const Hero = ({
   listUser = [
@@ -41,7 +42,6 @@ const Hero = ({
     <div className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto" id="about">
       <SessionModal
         isModalOpen={isModalOpen}
-       
         handleOk={handleOk}
         handleCancel={handleCancel}
       />
@@ -53,8 +53,8 @@ const Hero = ({
         >
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-              <span className="hidden sm:inline">Welcome to </span>Showluv Market Your End-to-End{" "}
-              <strong>Ecommerce Solution.</strong>
+              <span className="hidden sm:inline">Welcome to </span>Showluv
+              Market Your End-to-End <strong>Ecommerce Solution.</strong>
             </h1>
             <p className="text-black-500 mt-4 mb-6">
               Transform Your Business with a Click At Showluv Market, we believe
@@ -62,13 +62,13 @@ const Hero = ({
               we've created a groundbreaking ecommerce-as-a-service platform
               that does more than just sell your products online.
             </p>
-            <ButtonPrimary onClick={showModal}>Get Started</ButtonPrimary>
+            <ButtonOutline className={"!rounded-none border-2"} onClick={showModal}>Get Started</ButtonOutline>
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>
               <Image
-                src="/assets/Creative_thinking.gif"
-                alt="VPN Illustrasi"
+                src="/assets/hero_img.png"
+                alt="Illustrasi"
                 quality={100}
                 width={612}
                 height={612}

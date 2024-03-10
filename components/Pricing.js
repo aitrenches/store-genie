@@ -21,6 +21,20 @@ const Pricing = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.3 * index,
+      },
+    }),
+  };
   return (
     <div
       className="bg-gradient-to-b from-white-300 to-white-500 w-full py-14"
@@ -53,7 +67,7 @@ const Pricing = () => {
             <div className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center shadow-lg rounded-xl py-4 px-6 lg:px-12 xl:px-20 bg-white-500"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -63,14 +77,17 @@ const Pricing = () => {
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
-                    src="/assets/Free.png"
-                    width={145}
+                    src="/assets/basic.png"
+                    width={250}
                     height={165}
                     alt="Free Plan"
                   />
                 </div>
-                <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
+                <p className="text-xl text-orange-500 font-bold  capitalize my-2 sm:my-7">
                   Free Plan
+                </p>
+                <p className="text-4xl text-orange-500 text-center mb-4 font-extrabold">
+                  Free
                 </p>
                 <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
                   <li className="relative check custom-list my-2">
@@ -87,9 +104,6 @@ const Pricing = () => {
                   </li>
                 </ul>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-                  <p className="text-2xl text-black-600 text-center mb-4 ">
-                    Free
-                  </p>
                   <ButtonOutline>Select</ButtonOutline>
                 </div>
               </motion.div>
@@ -97,7 +111,7 @@ const Pricing = () => {
             <div className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center shadow-lg rounded-xl py-4 px-6 lg:px-12 xl:px-20 bg-white-500"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -107,14 +121,17 @@ const Pricing = () => {
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
-                    src="/assets/Standard.png"
-                    width={145}
+                    src="/assets/standard.png"
+                    width={250}
                     height={165}
                     alt="Standard Plan"
                   />
                 </div>
-                <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
+                <p className="text-xl text-orange-500 font-bold  capitalize my-2 sm:my-7">
                   Standard Plan{" "}
+                </p>
+                <p className="text-4xl text-orange-500 text-center mb-4 font-extrabold">
+                  $9<span className="text-black-500 text-2xl">/mo</span>
                 </p>
                 <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
                   <li className="relative check custom-list my-2">
@@ -134,9 +151,6 @@ const Pricing = () => {
                   </li>
                 </ul>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-                  <p className="text-2xl text-black-600 text-center mb-4 ">
-                    $9 <span className="text-black-500">/ mo</span>
-                  </p>
                   <ButtonOutline>Select</ButtonOutline>
                 </div>
               </motion.div>
@@ -144,7 +158,7 @@ const Pricing = () => {
             <div className="flex justify-center">
               <motion.div
                 variants={scrollAnimation}
-                className="flex flex-col justify-center items-center border-2 border-gray-500 rounded-xl py-4 px-6 lg:px-12 xl:px-20"
+                className="flex flex-col justify-center items-center shadow-lg rounded-xl py-4 px-6 lg:px-12 xl:px-20 bg-white-500"
                 whileHover={{
                   scale: 1.1,
                   transition: {
@@ -154,14 +168,17 @@ const Pricing = () => {
               >
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
-                    src="/assets/Premium.png"
-                    width={145}
+                    src="/assets/premium.png"
                     height={165}
+                    width={250}
                     alt="Premium Plan"
                   />
                 </div>
-                <p className="text-lg text-black-600 font-medium capitalize my-2 sm:my-7">
+                <p className="text-xl text-orange-500 font-bold  capitalize my-2 sm:my-7">
                   Premium Plan{" "}
+                </p>
+                <p className="text-4xl text-orange-500 text-center mb-4 font-extrabold">
+                  $12<span className="text-black-500 text-2xl">/mo</span>
                 </p>
                 <ul className="flex flex-col list-inside pl-6 xl:pl-0 items-start justify-start text-left text-black-500 flex-grow">
                   <li className="relative check custom-list my-2">
@@ -184,10 +201,6 @@ const Pricing = () => {
                   </li>
                 </ul>
                 <div className="flex flex-col w-full justify-center mb-8 flex-none mt-12">
-                  <p className="text-2xl text-black-600 text-center mb-4 ">
-                    $12 <span className="text-black-500">/ mo</span>
-                  </p>
-
                   <ButtonOutline>Select</ButtonOutline>
                 </div>
               </motion.div>
@@ -195,7 +208,108 @@ const Pricing = () => {
           </div>
         </div>
         <div className="flex flex-col w-full my-16">
+        <ScrollAnimationWrapper>
+            <motion.h3
+              variants={scrollAnimation}
+              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
+            >
+              Product Development Strategy
+            </motion.h3>
+            <div className="flex gap-10 justify-center mt-7 mb-16 flex-col sm:flex-row">
+              {" "}
+              <motion.div
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView={"animate"}
+                custom={0}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="relative w-[12rem] h-[12rem] ">
+                  <Image
+                    src="/assets/planning.png"
+                    alt=" Illustrasi"
+                    layout="fill"
+                    className="object-cover"
+                    quality={100}
+                  />
+                </div>
+                <div className="rounded-2xl h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                  <div className="text-white-500">
+                    <h4 className="font-bold text-xl text-white-500">
+                      Analysis & Strategic Planing
+                    </h4>
+                    <p className=" text-base text-white-500">
+                      Develop a customized roadmap closely aligned with business
+                      objectives, ensuring a clear path for software product
+                      development.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView={"animate"}
+                custom={1}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="relative w-[12rem] h-[12rem] ">
+                  <Image
+                    src="/assets/development.png"
+                    alt=" Illustrasi"
+                    layout="fill"
+                    className="object-cover"
+                    quality={100}
+                  />
+                </div>
+                <div className="rounded-2xl h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                  <div className="text-white-500">
+                    <h4 className="font-bold text-xl text-white-500">
+                      Implementation & Development
+                    </h4>
+                    <p className=" text-base text-white-500">
+                      Driving progress through robust implementation and agile
+                      development practices to bring your vision to life
+                      efficiently and effectively.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView={"animate"}
+                custom={3}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="relative w-[12rem] h-[12rem] ">
+                  <Image
+                    src="/assets/conti.png"
+                    alt=" Illustrasi"
+                    layout="fill"
+                    className="object-cover"
+                    quality={100}
+                  />
+                </div>
+                <div className="rounded-2xl h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                  <div className="text-white-500">
+                    <h4 className="font-bold text-xl text-white-500">
+                      Continuous Development & Improvements
+                    </h4>
+                    <p className=" text-base text-white-500">
+                      we continuously refine and optimize our processes,
+                      ensuring sustained improvement and superior results.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </ScrollAnimationWrapper>
           <ScrollAnimationWrapper>
+           
             <motion.h3
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed px-3 sm:w-9/12  mx-auto"
@@ -288,9 +402,7 @@ const Pricing = () => {
                     Explore how Showluv Market can transform your business.
                   </p>
                 </div>
-                <ButtonPrimary onClick={showModal}>
-                  Get started
-                </ButtonPrimary>
+                <ButtonPrimary onClick={showModal}>Get started</ButtonPrimary>
               </div>
               <div
                 className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"
