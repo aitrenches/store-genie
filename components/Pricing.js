@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import SessionModal from "./misc/Modal";
-
+import { IoIosCall } from "react-icons/io";
+import { FaRegEnvelope } from "react-icons/fa6";
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -207,8 +208,8 @@ const Pricing = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-full my-16">
-        <ScrollAnimationWrapper>
+        <div className="flex flex-col w-full mt-6">
+          <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
@@ -234,7 +235,7 @@ const Pricing = () => {
                     quality={100}
                   />
                 </div>
-                <div className="rounded-2xl h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                <div className="rounded-2xl h-[12rem] sm:h-60 lg:h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
                       Analysis & Strategic Planing
@@ -264,7 +265,7 @@ const Pricing = () => {
                     quality={100}
                   />
                 </div>
-                <div className="rounded-2xl h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                <div className="rounded-2xl h-[12rem] sm:h-60 lg:h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
                       Implementation & Development
@@ -294,7 +295,7 @@ const Pricing = () => {
                     quality={100}
                   />
                 </div>
-                <div className="rounded-2xl h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                <div className="rounded-2xl h-[12rem] sm:h-60 lg:h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
                       Continuous Development & Improvements
@@ -309,7 +310,6 @@ const Pricing = () => {
             </div>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper>
-           
             <motion.h3
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed px-3 sm:w-9/12  mx-auto"
@@ -334,12 +334,11 @@ const Pricing = () => {
               {/* <Maps className="w-full h-auto" /> */}
             </motion.div>
           </ScrollAnimationWrapper>
-          <ScrollAnimationWrapper>
+          {/* <ScrollAnimationWrapper>
             <motion.div
               className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap"
               variants={scrollAnimation}
             >
-              {/* <Netflix className="h-18 w-auto" /> */}
               <img
                 src="/assets/Icon/amazon.png"
                 className="h-14 w-auto mt-4 lg:mt-2"
@@ -366,22 +365,21 @@ const Pricing = () => {
                 alt=""
               />
             </motion.div>
-          </ScrollAnimationWrapper>
+          </ScrollAnimationWrapper> */}
         </div>
-        <div className="flex flex-col w-full my-16" id="testimoni">
+        <div className="flex flex-col w-full " id="testimoni">
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal sm:w-9/12  lg:w-4/12 mx-auto"
             >
-              Trusted by Thousands of Happy Customer{" "}
+              Trusted by Many Happy Customers{" "}
             </motion.h3>
             <motion.p
               variants={scrollAnimation}
               className="leading-normal mx-auto mb-2 mt-4 w-10/12 sm:w-7/12 lg:w-6/12"
             >
-              These are the stories of our customers who have joined us with
-              great pleasure when using this crazy feature.
+              These are the stories of our customers who have worked with us.
             </motion.p>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
@@ -389,6 +387,69 @@ const Pricing = () => {
               <Testimoni />
             </motion.div>
           </ScrollAnimationWrapper>
+          <div className="flex flex-col-reverse sm:grid grid-flow-dense sm:grid-cols-2 items-center bg-white-300 px-2 rounded-lg sm:px-8">
+            <ScrollAnimationWrapper className="w-full sm:w-[75%] flex flex-col py-12">
+              <motion.div variants={scrollAnimation}>
+                <motion.h3
+                  variants={scrollAnimation}
+                  className="text-2xl sm:text-3xl lg:text-4xl text-left font-medium text-black-600 leading-normal  mx-auto"
+                >
+                  Get in Touch{" "}
+                </motion.h3>
+
+                <div className="rounded-2xl h-[12rem] bg-orange-500 px-7 lg:px-14 py-2 flex flex-col justify-center mt-5 items-start">
+                  <div className="flex items-center gap-4">
+                    <span className="border-2 p-1 border-white-500 rounded-full">
+                      {" "}
+                      <IoIosCall color="white" />
+                    </span>
+                    <div className="text-white-500 text-left">
+                      <h4 className="font-bold text-xl text-white-500 flex gap-3 items-center">
+                        Phone Number
+                      </h4>
+                      <a
+                        href="tel:07064354605"
+                        className=" text-base text-white-500"
+                      >
+                        07064354605
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <span className="border-2 p-1 border-white-500 rounded-full">
+                      {" "}
+
+                      <FaRegEnvelope color="white" />                    </span>
+                    <div className="text-white-500 text-left">
+                      <h4 className="font-bold text-xl text-white-500 flex gap-3 items-center">
+                        Email
+                      </h4>
+                      <a
+                        href="mailto:info@showluv.com"
+                        className=" text-base text-white-500"
+                      >
+                        info@showluv.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </ScrollAnimationWrapper>
+            <ScrollAnimationWrapper className="w-full flex flex-col py-12">
+              <motion.div variants={scrollAnimation}>
+                <div className="relative w-[19rem] h-[19rem] lg:w-[30rem] lg:h-[22rem]">
+                  <Image
+                    src="/assets/contacts.png"
+                    alt=" Illustrasi"
+                    layout="fill"
+                    className="object-cover"
+                    quality={100}
+                  />
+                </div>
+              </motion.div>
+            </ScrollAnimationWrapper>
+          </div>
           <ScrollAnimationWrapper className="relative w-full mt-16">
             <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
               <div className="absolute rounded-xl  py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
