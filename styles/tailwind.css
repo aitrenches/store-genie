@@ -82,3 +82,32 @@ li.check:before {
 @tailwind utilities;
 /* purgecss start ignore */
 /* purgecss end ignore */
+
+.w-\[12rem\] {
+  width: 12rem /* 192px */;
+}
+.h-\[12rem\] {
+  height: 12rem /* 192px */;
+}
+.w-\[19rem\] {
+  width: 19rem/* 304px */;
+}
+.h-\[19rem\] {
+  height:
+   19rem/* 304px */;
+}
+.lg\:w-\[30rem\] {
+  width: 30rem/* 480px */;
+}
+.lg\:h-\[22rem\] {
+  height: 22rem/* 352px */;
+}
+@media (min-width: 1024px) {
+  .about_picture {
+    width: 30rem /* 480px */;
+    height: 22rem /* 352px */;
+  }
+  .lg\:h-\[12rem\] {
+    height: 12rem /* 192px */;
+  }
+}
