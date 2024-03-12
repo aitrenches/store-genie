@@ -226,7 +226,7 @@ const Pricing = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center"
               >
-                <div className="relative w-[12rem] h-[12rem] ">
+                <div className="relative product_image ">
                   <Image
                     src="/assets/planning.png"
                     alt=" Illustrasi"
@@ -235,7 +235,7 @@ const Pricing = () => {
                     quality={100}
                   />
                 </div>
-                <div className="rounded-2xl h-[12rem] sm:h-60 lg:h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                <div className="rounded-2xl text_height sm:h-60  bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
                       Analysis & Strategic Planing
@@ -256,7 +256,7 @@ const Pricing = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center"
               >
-                <div className="relative w-[12rem] h-[12rem] ">
+                <div className="relative product_image">
                   <Image
                     src="/assets/development.png"
                     alt=" Illustrasi"
@@ -265,7 +265,7 @@ const Pricing = () => {
                     quality={100}
                   />
                 </div>
-                <div className="rounded-2xl h-[12rem] sm:h-60 lg:h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                <div className="rounded-2xl text_height sm:h-60 bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
                       Implementation & Development
@@ -286,7 +286,7 @@ const Pricing = () => {
                 viewport={{ once: true }}
                 className="flex flex-col items-center"
               >
-                <div className="relative w-[12rem] h-[12rem] ">
+                <div className="relative product_image ">
                   <Image
                     src="/assets/conti.png"
                     alt=" Illustrasi"
@@ -295,7 +295,7 @@ const Pricing = () => {
                     quality={100}
                   />
                 </div>
-                <div className="rounded-2xl h-[12rem] sm:h-60 lg:h-[12rem] bg-orange-500 px-4 py-6 flex  mt-5">
+                <div className="rounded-2xl text_height sm:h-60  bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
                       Continuous Development & Improvements
@@ -419,8 +419,8 @@ const Pricing = () => {
                   <div className="flex items-center gap-4">
                     <span className="border-2 p-1 border-white-500 rounded-full">
                       {" "}
-
-                      <FaRegEnvelope color="white" />                    </span>
+                      <FaRegEnvelope color="white" />{" "}
+                    </span>
                     <div className="text-white-500 text-left">
                       <h4 className="font-bold text-xl text-white-500 flex gap-3 items-center">
                         Email
@@ -438,7 +438,7 @@ const Pricing = () => {
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper className="w-full flex flex-col py-12">
               <motion.div variants={scrollAnimation}>
-                <div className="relative  w-[19rem] h-[19rem] lg:w-[30rem] lg:h-[22rem]">
+                <div className="relative contact_image">
                   <Image
                     src="/assets/contacts.png"
                     alt=" Illustrasi"

@@ -83,24 +83,17 @@ li.check:before {
 /* purgecss start ignore */
 /* purgecss end ignore */
 
-.w-\[12rem\] {
+.product_image {
   width: 12rem /* 192px */;
-}
-.h-\[12rem\] {
   height: 12rem /* 192px */;
 }
-.w-\[19rem\] {
+
+.text_height{
+  height: 12rem/* 192px */;
+}
+.contact_image{
   width: 19rem/* 304px */;
-}
-.h-\[19rem\] {
-  height:
-   19rem/* 304px */;
-}
-.lg\:w-\[30rem\] {
-  width: 30rem/* 480px */;
-}
-.lg\:h-\[22rem\] {
-  height: 22rem/* 352px */;
+  height: 19rem/* 304px */
 }
 @media (min-width: 1024px) {
   .about_picture {
@@ -109,5 +102,12 @@ li.check:before {
   }
   .lg\:h-\[12rem\] {
     height: 12rem /* 192px */;
+  }
+  .text_height{
+    height: 12rem/* 192px */;
+  }
+  .contact_image{
+    width: 30rem/* 480px */;
+    height: 22rem/* 352px */;
   }
 }
