@@ -438,7 +438,7 @@ const Pricing = () => {
             </ScrollAnimationWrapper>
             <ScrollAnimationWrapper className="w-full flex flex-col py-12">
               <motion.div variants={scrollAnimation}>
-                <div className="relative w-[19rem] h-[19rem] lg:w-[30rem] lg:h-[22rem]">
+                <div className="relative  w-[19rem] h-[19rem] lg:w-[30rem] lg:h-[22rem]">
                   <Image
                     src="/assets/contacts.png"
                     alt=" Illustrasi"
