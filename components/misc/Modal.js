@@ -1,31 +1,70 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { UploadOutlined } from "@ant-design/icons";
-import {
-  Modal,
-  Button,
-  Checkbox,
-  Form,
-  Input,
-  Upload,
-  Radio,
-  Row,
-  Col,
-} from "antd";
+import { Modal, Form, Input, Select, Spin } from "antd";
 import ButtonPrimary from "./ButtonPrimary";
+import countries from "./json/country-flag.json";
+import { http } from "../../utils/axios";
+
 const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
   const { TextArea } = Input;
-  const onFinish = (values) => {
-    console.log("Success:", values);
+  // useEffect(() => {
+  //   const get = async () => {
+  //     const res = await http.get("/onboarding");
+  //     console.log(res);
+  //   };
+  //   get();
+  // }, []);
+  const [loading, setLoading] = useState(false);
+  const onFinish = async (values) => {
+    try {
+      setLoading(true);
+      const res = await http.post(`/onboarding`, values);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-  const normFile = (e) => {
-    console.log("Upload event:", e);
-    if (Array.isArray(e)) {
-      return e;
-    }
-    return e?.fileList;
+
+  const businessCategories = [
+    "Accounting",
+    "Advertising",
+    "Agriculture",
+    "Automotive",
+    "Banking",
+    "Beauty",
+    "Biotechnology",
+    "Construction",
+    "Consulting",
+    "Education",
+    "Energy",
+    "Engineering",
+    "Entertainment",
+    "Fashion",
+    "Finance",
+    "Food and Beverage",
+    "Healthcare",
+    "Hospitality",
+    "Information Technology",
+    "Insurance",
+    "Legal",
+    "Manufacturing",
+    "Marketing",
+    "Media",
+    "Non-Profit",
+    "Real Estate",
+    "Retail",
+    "Telecommunications",
+    "Transportation",
+    "Travel",
+    "Other",
+  ];
+
+  const filterOption = (input, option) => {
+    return (option?.value ?? "").toLowerCase().includes(input.toLowerCase());
   };
   return (
     <Modal
@@ -49,7 +88,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
         <hr className="mb-4" />
         <Form.Item
           label="Full Name"
-          name="full_name"
+          name="name"
           rules={[
             {
               required: true,
@@ -57,7 +96,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Enter your Full Name" />
         </Form.Item>
         <Form.Item
           label="Email Address"
@@ -69,8 +108,30 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Enter your Email Address" />
         </Form.Item>{" "}
+        <Form.Item
+          rules={[
+            {
+              required: true,
+              message: "Please select a Country!",
+            },
+          ]}
+          label="Country"
+          name="country"
+        >
+          <Select
+            showSearch
+            filterOption={filterOption}
+            placeholder="Select a country"
+          >
+            {countries.map((country) => (
+              <Select.Option value={country.country}>
+                {country.country}
+              </Select.Option>
+            ))}
+          </Select>
+        </Form.Item>
         <Form.Item
           label="Phone number"
           name="phone"
@@ -81,7 +142,10 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
             },
           ]}
         >
-          <Input type="number" />
+          <Input
+            type="number"
+            placeholder="Enter phone number e.g +2348012345678"
+          />
         </Form.Item>{" "}
         <h3 className="font-bold text-lg">Business Information</h3>
         <hr className="mb-4" />
@@ -95,182 +159,42 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Enter your Business Name" />
         </Form.Item>{" "}
         <Form.Item
-          label="Industry/Market Niche"
-          name="niche"
+          label="Business Category"
+          name="business_category"
           rules={[
             {
               required: true,
-              message: "Please input your Industry/Market Niche!",
+              message: "Please select your Business Category!",
             },
           ]}
         >
-          <Input />
+          <Select placeholder="Select a business category">
+            {businessCategories.map((category) => (
+              <Select.Option key={category} value={category}>
+                {category}
+              </Select.Option>
+            ))}
+          </Select>
         </Form.Item>{" "}
-        <Form.Item label="Years in Business" name="years">
-          <Input />
+        <Form.Item label="Website" name="website">
+          <Input placeholder="e.g showluv.com" />
         </Form.Item>{" "}
-        <h3 className="font-bold text-lg">Ecommerce Platform Requirements</h3>
-        <hr className="mb-4" />
         <Form.Item
-          label="Desired Subdomain"
-          name="subdomain"
           rules={[
             {
               required: true,
-              message: "Please input your desired subdomain!",
+              message: "Please enter your interested feature!",
             },
           ]}
+          name={"interested_feature"}
+          label="Interested Features"
         >
-          <Input placeholder="e.g showluv.come" />
-        </Form.Item>{" "}
-        <Form.Item
-          name="existing_logo"
-          label="Existing logo and brand guidelines?"
-          valuePropName="fileList"
-          getValueFromEvent={normFile}
-        >
-          <Upload name="logo" action="/upload.do" listType="picture">
-            <Button icon={<UploadOutlined />}>Click to upload</Button>
-          </Upload>
+          <TextArea rows={4} />
         </Form.Item>
-        <Form.Item
-          label="Estimated Number of Initial Products"
-          name="initial_products"
-        >
-          <Input type="number" placeholder="100" />
-        </Form.Item>
-        <Form.Item
-          label="List the main categories of products you plan to sell:"
-          name="categories"
-        >
-          <Input placeholder="e.g computer software, computer hardware" />
-        </Form.Item>
-        <Form.Item
-          label="Preferred Payment Processors: (Stripe, PayPal, others specify)"
-          name="payment_processors"
-        >
-          <Input placeholder="e.g Stripe, Flutterwave" />
-        </Form.Item>
-        <Form.Item
-         rules={[
-          {
-            required: true,
-            message: "Please select an option",
-          },
-        ]}
-          name="multi_currency_support"
-          label="Do you require multi-currency support?"
-        >
-          <Radio.Group>
-            <Radio value="yes">Yes</Radio>
-            <Radio value="no">No</Radio>
-          </Radio.Group>
-        </Form.Item>
-        <Form.Item
-         rules={[
-          {
-            required: true,
-            message: "Please select a shipping option",
-          },
-        ]}
-          name="ship_international"
-          label="Do you plan to ship internationally?"
-        >
-          <Radio.Group>
-            <Radio value="yes">Yes</Radio>
-            <Radio value="no">No</Radio>
-          </Radio.Group>
-        </Form.Item>
-        <Form.Item
-          name="inventory_services"
-          rules={[
-            {
-              required: true,
-              message: "Please select an option",
-            },
-          ]}
-          label="Will you need inventory management services?"
-        >
-          <Radio.Group>
-            <Radio value="yes">Yes</Radio>
-            <Radio value="no">No</Radio>
-          </Radio.Group>
-        </Form.Item>
-        <Form.Item name="checkbox-group" label="Checkbox.Group">
-          <Checkbox.Group>
-            <div className="flex flex-col">
-              <Checkbox
-                value="SEO Optimization"
-                style={{
-                  lineHeight: "32px",
-                }}
-              >
-                SEO Optimization
-              </Checkbox>
-
-              <Checkbox
-                value="Email Marketing Integration"
-                style={{
-                  lineHeight: "32px",
-                }}
-              >
-                Email Marketing Integration
-              </Checkbox>
-
-              <Checkbox
-                value="Live Chat Support"
-                style={{
-                  lineHeight: "32px",
-                }}
-              >
-                Live Chat Support
-              </Checkbox>
-
-              <Checkbox
-                value="Customer Review System"
-                style={{
-                  lineHeight: "32px",
-                }}
-              >
-                Customer Review System
-              </Checkbox>
-
-              <Checkbox
-                value="Social Media Integration"
-                style={{
-                  lineHeight: "32px",
-                }}
-              >
-                Social Media Integration
-              </Checkbox>
-
-              <Checkbox
-                value="Blog/Content Management System"
-                style={{
-                  lineHeight: "32px",
-                }}
-              >
-                Blog/Content Management System
-              </Checkbox>
-
-              <Checkbox
-                value="Loyalty Program Features"
-                style={{
-                  lineHeight: "32px",
-                }}
-              >
-                Loyalty Program Features
-              </Checkbox>
-              <Form.Item label="Others" name="other">
-                <Input placeholder="other features" />
-              </Form.Item>
-            </div>
-          </Checkbox.Group>
-        </Form.Item>
-        <Form.Item label="Comments & Special Requests">
+        <Form.Item name={"additional_notes"} label="Additional Notes">
           <TextArea rows={4} />
         </Form.Item>
         <small>
@@ -285,7 +209,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
           }}
         >
           <ButtonPrimary addClass={"mt-4"} type="primary" htmlType="submit">
-            Submit
+            Submit {loading && <Spin />}
           </ButtonPrimary>
         </Form.Item>
       </Form>
