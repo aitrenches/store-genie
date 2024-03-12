@@ -7,16 +7,14 @@ export const http = axios.create({
   baseURL: baseURL,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+    Authorization: process.env.NEXT_PUBLIC_API_KEY,
   },
 });
 
 // Request interceptors for API calls
 http.interceptors.request.use(
   (request) => {
-    request.headers[
-      "Authorization"
-    ] = `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`;
+    request.headers["Authorization"] = process.env.NEXT_PUBLIC_API_KEY;
     return request;
   },
   (error) => {
