@@ -7,6 +7,7 @@ import { http } from "../../utils/axios";
 
 const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
   const { TextArea } = Input;
+  const [form] = Form.useForm();
   // useEffect(() => {
   //   const get = async () => {
   //     const res = await http.get("/onboarding");
@@ -21,6 +22,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
     try {
       setLoading(true);
       const res = await http.post(`/onboarding`, values);
+      form.resetFields();
       setShowModal("success");
     } catch (error) {
       console.log(error);
@@ -87,6 +89,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
         onCancel={handleCancel}
       >
         <Form
+          form={form}
           name="basic"
           layout="vertical"
           initialValues={{
