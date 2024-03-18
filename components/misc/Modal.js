@@ -22,6 +22,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
     try {
       setLoading(true);
       const res = await http.post(`/onboarding`, values);
+      console.log(res)
       form.resetFields();
       setShowModal("success");
     } catch (error) {
@@ -204,7 +205,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
                 message: "Please enter your interested feature!",
               },
             ]}
-            name={"interested_feature"}
+            name={"interested_features"}
             label="Interested Features"
           >
             <TextArea rows={4} />
