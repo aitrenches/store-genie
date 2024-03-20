@@ -3,7 +3,7 @@ import { UploadOutlined } from "@ant-design/icons";
 import { Modal, Form, Input, Select, Spin, Result } from "antd";
 import ButtonPrimary from "./ButtonPrimary";
 import countries from "./json/country-flag.json";
-import { http } from "../../utils/axios";
+import { baseURL, http } from "../../utils/axios";
 
 const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
   const { TextArea } = Input;
@@ -21,7 +21,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
   const onFinish = async (values) => {
     try {
       setLoading(true);
-      const res = await http.post(`/onboarding`, values);
+      const res = await axios.post(`${baseURL}/onboarding`, values);
       console.log(res)
       form.resetFields();
       setShowModal("success");
