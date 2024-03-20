@@ -90,6 +90,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
         onCancel={handleCancel}
       >
         <Form
+        method="POST"
           form={form}
           name="basic"
           layout="vertical"
