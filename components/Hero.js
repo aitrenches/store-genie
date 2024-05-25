@@ -54,10 +54,10 @@ const Hero = ({
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
               <span className="hidden sm:inline">Welcome to </span>Showluv
-              Market Your End-to-End <strong>Ecommerce Solution.</strong>
+              Markets Your End-to-End <strong>Ecommerce Solution.</strong>
             </h1>
             <p className="text-black-500 mt-4 mb-6">
-              Transform Your Business with a Click At Showluv Market, we believe
+              Transform Your Business with a Click At Showluv Markets, we believe
               every business, big or small, deserves to shine online. That's why
               we've created a groundbreaking ecommerce-as-a-service platform
               that does more than just sell your products online.
