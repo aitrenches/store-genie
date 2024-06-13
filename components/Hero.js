@@ -53,7 +53,7 @@ const Hero = ({
         >
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-              Launch your&nbsp;e-commerce business&nbsp;in one hour!
+              Launch your <span style={{ whiteSpace: 'nowrap' }}>e-commerce business</span> in one hour!
             </h1>
             <p className="text-black-500 mt-4 mb-6">
               Choose your package and tell us about your business in a few sentences.
