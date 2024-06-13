@@ -10,28 +10,28 @@ import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 const Testimoni = ({
   listTestimoni = [
     {
-      name: "iezh Robert",
+      name: "Aaliyah Igwe",
       image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
+      city: "Nairobi",
+      country: "Kenya",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to work with ShowLuv, it turned out to be more than my expectations and so far there have been no problems. Showluv Market always the best",
+        "The inventory management system is intuitive and keeps everything organized, while the fulfillment services have been a game-changer for my logistics",
     },
     {
-      name: "iezh Robert",
+      name: "Francois Mercer",
       image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
+      city: "Zaria",
+      country: "Nigeria",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to work with ShowLuv, it turned out to be more than my expectations and so far there have been no problems. Showluv Market always the best",
+        "The comprehensive e-commerce solutions have streamlined every aspect of my business, from the beautifully designed website to the seamless inventory and order management",
     },
     {
-      name: "iezh Robert",
+      name: "Yanis Petros",
       image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
+      city: "Accra",
+      country: "Ghana",
       rating: "4.5",
       testimoni:
         "Wow... I am very happy to work with ShowLuv, it turned out to be more than my expectations and so far there have been no problems. Showluv Market always the best",
