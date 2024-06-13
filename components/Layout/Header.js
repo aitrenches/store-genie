@@ -191,6 +191,7 @@ const Header = () => {
               </svg>
               Feature
             </LinkScroll>
+              {/*
             <LinkScroll
               activeClass="active"
               to="pricing"
@@ -223,6 +224,7 @@ const Header = () => {
               </svg>
               Pricing
             </LinkScroll>
+            */}
             <LinkScroll
               activeClass="active"
               to="testimoni"
