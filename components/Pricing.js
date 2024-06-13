@@ -122,6 +122,7 @@ const Pricing = () => {
                 }}
               >
               */}
+              {/*
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
                     src="/assets/standard.png"
@@ -169,6 +170,7 @@ const Pricing = () => {
                   },
                 }}
               >
+              */}
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
                     src="/assets/premium.png"
