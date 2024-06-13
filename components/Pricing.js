@@ -54,6 +54,7 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
+            {/*
               Choose Your Plan
             </motion.h3>
             <motion.p
@@ -76,7 +77,6 @@ const Pricing = () => {
                   },
                 }}
               >
-              {/*
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
                     src="/assets/basic.png"
@@ -121,8 +121,6 @@ const Pricing = () => {
                   },
                 }}
               >
-              */}
-              {/*
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
                     src="/assets/standard.png"
@@ -170,7 +168,6 @@ const Pricing = () => {
                   },
                 }}
               >
-              */}
                 <div className="p-4 lg:p-0 mt-6 lg:mt-16">
                   <Image
                     src="/assets/premium.png"
@@ -218,6 +215,7 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
+            */}
               Product Development Strategy
             </motion.h3>
             <div className="flex gap-10 justify-center mt-7 mb-16 flex-col sm:flex-row">
