@@ -216,7 +216,7 @@ const Pricing = () => {
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
             >
             */}
-              Product Development Strategy
+              How do we do it?
             </motion.h3>
             <div className="flex gap-10 justify-center mt-7 mb-16 flex-col sm:flex-row">
               {" "}
@@ -240,12 +240,12 @@ const Pricing = () => {
                 <div className="rounded-2xl text_height sm:h-60  bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
-                      Analysis & Strategic Planing
+                      AI-powered Efficiency
                     </h4>
                     <p className=" text-base text-white-500">
-                      Develop a customized roadmap closely aligned with business
-                      objectives, ensuring a clear path for software product
-                      development.
+                      Create a fully functional e-commerce website in under an hour,
+                      thanks to our advanced AI that designs and populates your site
+                      based on your input.
                     </p>
                   </div>
                 </div>
@@ -270,12 +270,11 @@ const Pricing = () => {
                 <div className="rounded-2xl text_height sm:h-60 bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
-                      Implementation & Development
+                      Comprehensive Solutions
                     </h4>
                     <p className=" text-base text-white-500">
-                      Driving progress through robust implementation and agile
-                      development practices to bring your vision to life
-                      efficiently and effectively.
+                      From warehousing and fulfillment to multi-language support and
+                      integrated payment gateways, we've got every aspect of e-commerce covered.
                     </p>
                   </div>
                 </div>
@@ -300,11 +299,12 @@ const Pricing = () => {
                 <div className="rounded-2xl text_height sm:h-60  bg-orange-500 px-4 py-6 flex  mt-5">
                   <div className="text-white-500">
                     <h4 className="font-bold text-xl text-white-500">
-                      Continuous Development & Improvements
+                      Empowerment at Scale
                     </h4>
                     <p className=" text-base text-white-500">
-                      we continuously refine and optimize our processes,
-                      ensuring sustained improvement and superior results.
+                      Designed for entrepreneurs by entrepreneurs,
+                      we offer competitive pricing with zero commission on sales,
+                      making your growth our top priority.
                     </p>
                   </div>
                 </div>
@@ -322,10 +322,9 @@ const Pricing = () => {
               className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12"
               variants={scrollAnimation}
             >
-              Showluv is here to revolutionize how you manage, market, and move
-              your products. Say goodbye to the hassle of setting up an
-              ecommerce site and say hello to your very own, personalized online
-              store
+              In the world of e-commerce, it's not just about selling products;
+                it's about telling a story that resonates. 
+                At Showluv, we give you the platform and support to tell yours.
             </motion.p>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper>
@@ -462,10 +461,10 @@ const Pricing = () => {
                   </h5>
                   <p>
                     {" "}
-                    Explore how Showluv Market can transform your business.
+                    Explore how Showluv can transform your business.
                   </p>
                 </div>
-                <ButtonPrimary onClick={showModal}>Get started</ButtonPrimary>
+                <ButtonPrimary onClick={showModal}>Join the Waitlist</ButtonPrimary>
               </div>
               <div
                 className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"
