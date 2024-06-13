@@ -55,6 +55,8 @@ const Feature = () => {
               You can explore the services that we provide with fun and have
               their own functions each service.
             </p> */}
+            <p>
+            </p>
             <ul className="text-black-500 self-start list-inside ml-8">
               {features.map((feature, index) => (
                 <motion.li
