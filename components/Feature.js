@@ -5,9 +5,10 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
 const features = [
-  "Efficient Inventory Management",
+  "AI-powered efficiency",
   "Quick and Easy Setup",
-  "Customization at Your Fingertips",
+  "Comprehensive solutions",
+  "Empowerement at scale",
   // "No specific time limits."
 ];
 
@@ -48,12 +49,12 @@ const Feature = () => {
             variants={scrollAnimation}
           >
             <h3 className="text-3xl lg:text-4xl font-medium leading-relaxed text-black-600">
-              We Provide Many Services You Can Use
+              What is special about Showluv?
             </h3>
-            <p className="my-2 text-black-500">
-              You can explore the services that we provide with fun and have
-              their own functions each service.
-            </p>
+            // <p className="my-2 text-black-500">
+            //   You can explore the services that we provide with fun and have
+            //   their own functions each service.
+            // </p>
             <ul className="text-black-500 self-start list-inside ml-8">
               {features.map((feature, index) => (
                 <motion.li
@@ -76,18 +77,18 @@ const Feature = () => {
             <div className="rounded-2xl bg-orange-500 px-4 sm:px-8 py-6 flex gap-7 justify-center sm:gap-12  mt-5">
 
               <div className="text-white-500">
-                <h4 className="font-bold text-xl text-white-500">99%</h4>
-                <p className=" text-base text-white-500">Customer  satisfaction</p>
+                <h4 className="font-bold text-xl text-white-500">95%</h4>
+                <p className=" text-base text-white-500">Customer satisfaction</p>
               </div>
 
               <div className="text-white-500">
                 <h4 className="font-bold text-xl text-white-500">50</h4>
-                <p className=" text-base text-white-500">Active  users</p>
+                <p className=" text-base text-white-500">Increase in Users</p>
               </div>
 
               <div className="text-white-500">
                 <h4 className="font-bold text-xl text-white-500">120%</h4>
-                <p className=" text-base text-white-500">Company  growth</p>
+                <p className=" text-base text-white-500">Business  growth</p>
               </div>
             </div>
           </motion.div>
