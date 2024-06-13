@@ -57,8 +57,12 @@ const Hero = ({
             </h1>
             <p className="text-black-500 mt-4 mb-6">
               1. Choose your package and tell us about your business in a few sentences.
+            </p>
+            <p className="text-black-500 mt-4 mb-6">
               2. Our AI-powered website builder crafts your website, 
               complete with online payment integration, and a sleek design that reflects your brand identity.
+            </p>
+            <p className="text-black-500 mt-4 mb-6">
               3. With one click, your site goes live. Our backend team handles everything from order fulfillment to global shipping.
             </p>
             <ButtonOutline className={"!rounded-none border-2"} onClick={showModal}>Join the Waitlist</ButtonOutline>
