@@ -51,10 +51,10 @@ const Feature = () => {
             <h3 className="text-3xl lg:text-4xl font-medium leading-relaxed text-black-600">
               What is special about Showluv?
             </h3>
-            // <p className="my-2 text-black-500">
-            //   You can explore the services that we provide with fun and have
-            //   their own functions each service.
-            // </p>
+            /* <p className="my-2 text-black-500">
+              You can explore the services that we provide with fun and have
+              their own functions each service.
+            </p> */
             <ul className="text-black-500 self-start list-inside ml-8">
               {features.map((feature, index) => (
                 <motion.li
