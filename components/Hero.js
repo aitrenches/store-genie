@@ -53,7 +53,7 @@ const Hero = ({
         >
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-              Launch your e-commerce business in one hour!
+              Launch your&nbsp;e-commerce business&nbsp;in one hour!
             </h1>
             <p className="text-black-500 mt-4 mb-6">
               Choose your package and tell us about your business in a few sentences.
@@ -61,7 +61,7 @@ const Hero = ({
               complete with online payment integration, and a sleek design that reflects your brand identity.
               With one click, your site goes live. Our backend team handles everything from order fulfillment to global shipping.
             </p>
-            <ButtonOutline className={"!rounded-none border-2"} onClick={showModal}>Get Started</ButtonOutline>
+            <ButtonOutline className={"!rounded-none border-2"} onClick={showModal}>Join the Waitlist</ButtonOutline>
           </div>
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>
