@@ -316,7 +316,7 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed px-3 sm:w-9/12  mx-auto"
             >
-              Customized Ecommerce Platform Your Brand, Your Store, Your Way
+              Personalized E-commerce, Your Brand, Your Store, Your Way
             </motion.h3>
             <motion.p
               className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12"
