@@ -13,8 +13,8 @@ const Footer = () => {
             <Image src={"/assets/logo.png"} layout="fill" fill />
           </div>
           <p className="mb-4">
-            <strong className="font-medium">Shuwluv Africa</strong> Customized
-            Ecommerce Platform For Your Brand, Your Store, Your Way
+            <strong className="font-medium">Shuwluv</strong>
+            AI Powered E-commerce For Your Brand, Your Store, Your Way
           </p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
             <div className="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
