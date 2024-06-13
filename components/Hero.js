@@ -53,14 +53,14 @@ const Hero = ({
         >
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-              <span className="hidden sm:inline">Launch </span>Showluv
-              Your <strong>Ecommerce Business</strong> in one hour
+              <span className="hidden sm:inline">Launch </span>
+              your <strong>e-commerce business</strong> in one hour!
             </h1>
             <p className="text-black-500 mt-4 mb-6">
-              Transform Your Business with a Click At Showluv Markets, we believe
-              every business, big or small, deserves to shine online. That's why
-              we've created a groundbreaking ecommerce-as-a-service platform
-              that does more than just sell your products online.
+              Choose your package and tell us about your business in a few sentences.
+              Our AI-powered website builder crafts your website, 
+              complete with online payment integration, and a sleek design that reflects your brand identity.
+              With a click, your site goes live. Our backend team handles everything from order fulfillment to global shipping.
             </p>
             <ButtonOutline className={"!rounded-none border-2"} onClick={showModal}>Get Started</ButtonOutline>
           </div>
