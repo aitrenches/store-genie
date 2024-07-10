@@ -84,7 +84,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
       {" "}
       <Modal
         footer={false}
-        title="Showluv Market Platform Setup Form"
+        title="Store Genie Market Platform Setup Form"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -197,7 +197,7 @@ const SessionModal = ({ isModalOpen, handleOk, handleCancel }) => {
             </Select>
           </Form.Item>{" "}
           <Form.Item label="Website" name="website">
-            <Input placeholder="e.g showluv.com" />
+            <Input placeholder="e.g store-genie.com" />
           </Form.Item>{" "}
           <Form.Item
             rules={[

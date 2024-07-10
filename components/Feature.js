@@ -49,7 +49,7 @@ const Feature = () => {
             variants={scrollAnimation}
           >
             <h3 className="text-3xl lg:text-4xl font-medium leading-relaxed text-black-600">
-              What is special about Showluv?
+              What is special about Store Genie?
             </h3>
             {/* <p className="my-2 text-black-500">
               You can explore the services that we provide with fun and have

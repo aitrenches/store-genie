@@ -324,7 +324,7 @@ const Pricing = () => {
             >
               In the world of e-commerce, it's not just about selling products;
                 it's about telling a story that resonates. 
-                At Showluv, we give you the platform and support to tell yours.
+                At Store Genie, we give you the platform and support to tell yours.
             </motion.p>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper>
@@ -427,10 +427,10 @@ const Pricing = () => {
                         Email
                       </h4>
                       <a
-                        href="mailto:info@showluv.com"
+                        href="mailto:info@Store Genie.com"
                         className=" text-base text-white-500"
                       >
-                        info@showluv.com
+                        info@store-genie.com
                       </a>
                     </div>
                   </div>
@@ -461,7 +461,7 @@ const Pricing = () => {
                   </h5>
                   <p>
                     {" "}
-                    Explore how Showluv can transform your business.
+                    Explore how Store Genie can transform your business.
                   </p>
                 </div>
                 <ButtonPrimary onClick={showModal}>Join the Waitlist</ButtonPrimary>

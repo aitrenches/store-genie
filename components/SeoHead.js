@@ -3,11 +3,11 @@ import { useRouter } from "next/router";
 
 // Default value for some meta data
 const defaultMeta = {
-  title: "Showluv",
-  siteName: "Showluv",
+  title: "Store Genie",
+  siteName: "Store Genie",
   description: "Start your AI powered e-commerce business in 1 hour",
   // change base url of your web (without '/' at the end)
-  url: "https://www.showluv.markets",
+  url: "https://www.store-genie.com",
   type: "website",
   robots: "follow, index",
   // change with url of your image (recommended dimension = 1.91:1)

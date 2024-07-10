@@ -13,7 +13,7 @@ const Footer = () => {
             <Image src={"/assets/logo.png"} layout="fill" fill />
           </div>
           <p className="mb-4">
-            <strong className="font-medium">Showluv </strong>
+            <strong className="font-medium">Store Genie </strong>
             AI Powered E-commerce For Your Brand, Your Store, Your Way
           </p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-gray-400">
-            ©{new Date().getFullYear()} - Showluv Africa
+            ©{new Date().getFullYear()} - Store Genie
           </p>
         </div>
         <div className=" row-span-3 sm:col-span-2 sm:col-start-7 sm:col-end-9 flex flex-col">
@@ -65,7 +65,7 @@ const Footer = () => {
           <p className="text-black-600 mb-4 font-medium text-lg">Engage</p>
           <ul className="text-black-500">
             <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
-              Showluv Africa ?{" "}
+              Store Genie ?{" "}
             </li>
             <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
               FAQ{" "}

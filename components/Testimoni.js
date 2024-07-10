@@ -34,7 +34,7 @@ const Testimoni = ({
       country: "Ghana",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to work with ShowLuv, it turned out to be more than my expectations and so far there have been no problems. Showluv Market always the best",
+        "Wow... I am very happy to work with Store Genie, it turned out to be more than my expectations and so far there have been no problems. Store Genie Market always the best",
     },
     {
       name: "iezh Robert",
@@ -43,7 +43,7 @@ const Testimoni = ({
       country: "Poland",
       rating: "4.5",
       testimoni:
-        "Wow... I am very happy to work with ShowLuv, it turned out to be more than my expectations and so far there have been no problems. Showluv Market always the best",
+        "Wow... I am very happy to work with Store Genie, it turned out to be more than my expectations and so far there have been no problems. Store Genie Market always the best",
     },
   ],
 }) => {
